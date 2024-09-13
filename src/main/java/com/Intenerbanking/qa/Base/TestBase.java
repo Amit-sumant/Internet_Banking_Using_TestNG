@@ -1,11 +1,15 @@
 package com.Intenerbanking.qa.Base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -61,6 +65,15 @@ public class TestBase
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtility.Implicit_Wait));
 		
 		driver.get(prop.getProperty("url"));
+	}
+	
+	public void failedTestCases() throws IOException
+	{
+		File srcTarget = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File trgFile=new File(".\\Screenshots\\\"+fileName +\".png\"");
+		
+		FileUtils.copyDirectory(srcTarget, trgFile);
+		
 	}
 
 }

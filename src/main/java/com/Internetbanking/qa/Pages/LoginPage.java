@@ -42,11 +42,12 @@ public class LoginPage extends TestBase
 		return loginPageLogo.isDisplayed();
 	}
 	
-	public HomePage login(String uname, String pwd) throws IOException
+	public HomePage login(String uname, String pwd) throws IOException, InterruptedException
 	{
 		username.sendKeys(uname);
+		Thread.sleep(1000);
 		userPwd.sendKeys(pwd);
-		
+		Thread.sleep(1000);
 		btnSubmit.click();
 		
 		return new HomePage();

@@ -47,7 +47,7 @@ public class Login_TestCase extends TestBase
 	}
 	
 	@Test (priority = 3)
-	public void enterCredentials() throws IOException
+	public void enterCredentials() throws IOException, InterruptedException
 	{
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
