@@ -15,7 +15,7 @@ public class TestUtility extends TestBase
 {
 	/**
 	 * 
-	 * @throws IOException.
+	 * @throws IOException. This is utility
 	 */
 	public TestUtility() throws IOException {
 		super();
