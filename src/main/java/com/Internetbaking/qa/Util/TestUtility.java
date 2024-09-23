@@ -13,6 +13,10 @@ import com.Intenerbanking.qa.Base.TestBase;
 
 public class TestUtility extends TestBase
 {
+	/**
+	 * 
+	 * @throws IOException This all generic functions only
+	 */
 	public TestUtility() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
