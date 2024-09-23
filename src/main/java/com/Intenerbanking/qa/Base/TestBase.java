@@ -41,6 +41,8 @@ public class TestBase
 	}
 	public static void initialization()
 	{
+		// This code for select the and open browser
+		
 		String strBrowserName = prop.getProperty("browser");
 		
 		if(strBrowserName.equals("chrome"))
